@@ -1,0 +1,69 @@
+.aboutus {
+  background-color: red;
+  grid-row: 4 / 5;
+  grid-column: center-start / center-end; }
+
+.agency {
+  background-color: blue;
+  grid-row: 1 / 2;
+  grid-column: col-start 4 / full-end; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 4rem; }
+
+.container {
+  display: grid;
+  grid-template-rows: 60vh repeat(4, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(7, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.footer {
+  background-color: midnightblue;
+  grid-row: 5 / -1;
+  grid-column: full-start / full-end; }
+
+.gallery {
+  background-color: olivedrab;
+  grid-row: 3 / 4;
+  grid-column: center-start / center-end; }
+
+.head {
+  background-color: orchid;
+  grid-row: 1 / 2;
+  grid-column: full-start / col-end 3; }
+
+.services {
+  background-color: yellow;
+  grid-row: 2 / 3;
+  grid-column: full-start / full-end; }
+
+.sidebar {
+  background-color: #41729F;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1;
+  position: relative;
+  display: flex;
+  justify-content: center; }
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+  background-color: #C3E0E5;
+  height: 2px;
+  width: 4.5rem;
+  margin-top: 4rem; }
+  .nav-btn::before, .nav-btn::after {
+    background-color: #C3E0E5;
+    height: 2px;
+    width: 4.5rem;
+    content: "";
+    display: block; }
+  .nav-btn::before {
+    transform: translateY(-1.5rem); }
+  .nav-btn::after {
+    transform: translateY(1.3rem); }
