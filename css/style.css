@@ -4,9 +4,19 @@
   grid-column: center-start / center-end; }
 
 .agency {
-  background-color: blue;
+  display: grid;
+  align-content: center;
   grid-row: 1 / 2;
   grid-column: col-start 4 / full-end; }
+  .agency img {
+    justify-self: center;
+    width: 70%; }
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0; }
 
 html {
   box-sizing: border-box;
@@ -14,8 +24,9 @@ html {
 
 body {
   font-family: 'Raleway', sans-serif;
-  color: white;
-  font-size: 4rem; }
+  color: #274472;
+  font-weight: 300;
+  line-height: 1.6; }
 
 .container {
   display: grid;
@@ -33,9 +44,26 @@ body {
   grid-column: center-start / center-end; }
 
 .head {
-  background-color: orchid;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #C3E0E5;
   grid-row: 1 / 2;
   grid-column: full-start / col-end 3; }
+  .head .heading-primary--main {
+    font-size: 10rem;
+    font-weight: 500;
+    line-height: 9rem; }
+  .head .heading-primary--sub {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 800;
+    padding-top: 1.5rem; }
+    .head .heading-primary--sub i {
+      border-radius: 100%;
+      font-size: 7rem;
+      padding-right: 2rem; }
 
 .services {
   background-color: yellow;

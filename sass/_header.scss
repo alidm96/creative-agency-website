@@ -1,6 +1,31 @@
 .head {
-    background-color: orchid;
-
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-secondary;
     grid-row: 1 / 2;
     grid-column: full-start / col-end 3;
+
+    .heading-primary {
+        &--main {
+            font-size: 10rem;
+            font-weight: 500;
+            line-height: 9rem;
+        }
+    
+        &--sub {
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+            font-weight: 800;
+            padding-top: 1.5rem;
+    
+            i {
+                border-radius: 100%;
+                font-size: 7rem;
+                padding-right: 2rem;
+            }
+        }
+    }
 }
+

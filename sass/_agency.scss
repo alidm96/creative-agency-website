@@ -1,6 +1,11 @@
 .agency {
-    background-color: blue;
-
+    display: grid;
+    align-content: center;
     grid-row: 1 / 2;
     grid-column: col-start 4 / full-end;
+
+    img {
+        justify-self: center;
+        width: 70%;
+    }
 }

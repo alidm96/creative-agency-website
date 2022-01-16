@@ -9,6 +9,13 @@ $color-blue:         #5885AF;
 $color-black:        #000000;
 $color-white:        #ffffff;
 
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+}
+
 html {
     box-sizing: border-box;
     font-size:  62.5%;
@@ -16,16 +23,16 @@ html {
 
 body {
     font-family: 'Raleway', sans-serif;
-    color:     white;
-    font-size:   4rem;
-    // color:       $color-primary-dark;
-    // font-weight: 300;
-    // line-height: 1.6;
+    color:       $color-primary-dark;
+    font-weight: 300;
+    line-height: 1.6;
 }
 
 .container {
     display: grid;
 
-    grid-template-rows: 60vh repeat(4, min-content);
-    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(7, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-rows:    60vh repeat(4, min-content);
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) 
+                           [center-start] repeat(7, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 
+                           minmax(6rem, 1fr) [full-end];
 }
