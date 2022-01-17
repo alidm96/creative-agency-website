@@ -1,6 +1,68 @@
 .services {
-    background-color: yellow;
+    display:               grid;
+    background-color:      $color-primary-dark;
+    color:                 $color-white;
+    grid-row:              2 / 3;
+    grid-column:           full-start / full-end;
+    grid-template-rows:    minmax(0, 1fr) repeat(2, min-content) minmax(0, 1fr);
+    grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(3, [col-start] max-content [col-end])
+                           [center-end] minmax(1rem, 1fr) [full-end];
+    grid-gap:              10rem;
+    
+    &__items {
+        display:               grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-template-rows:    repeat(2, max-content);
+        grid-gap:              2rem;
+        
+        &--icon {
+            font-size:   3rem;
+            grid-column: 1 / 2;
+            grid-row:    1 / 2;
+        }
 
-    grid-row: 2 / 3;
-    grid-column: full-start / full-end;
+        &--title {
+            font-size:   2rem;
+            font-weight: 700;
+            grid-column: 2 / -1;
+            grid-row:    1 / 2;
+        }
+
+        &--text {
+            width:       20rem;
+            font-size:   1.8rem;
+            grid-column: 2 / -1;
+            grid-row:    2 / -1;
+        }
+
+        &--1 {
+            grid-row:    2 / 3;
+            grid-column: col-start 1 / col-end 1;
+        }
+
+        &--2 {
+            grid-row:    2 / 3;
+            grid-column: col-start 2 / col-end 2;
+        }
+
+        &--3 {
+            grid-row:    2 / 3;
+            grid-column: col-start 3 / col-end 3;
+        }
+
+        &--4 {
+            grid-row:    3 / 4;
+            grid-column: col-start 1 / col-end 1;
+        }
+
+        &--5 {
+            grid-row:    3 / 4;
+            grid-column: col-start 2 / col-end 2;
+        }
+
+        &--6 {
+            grid-row:    3 / 4;
+            grid-column: col-start 3 / col-end 3;
+        }
+    }
 }

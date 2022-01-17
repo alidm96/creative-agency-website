@@ -13,7 +13,7 @@ $color-white:        #ffffff;
 *::after,
 *::before {
     padding: 0;
-    margin: 0;
+    margin:  0;
 }
 
 html {
@@ -29,8 +29,7 @@ body {
 }
 
 .container {
-    display: grid;
-
+    display:               grid;
     grid-template-rows:    60vh repeat(4, min-content);
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) 
                            [center-start] repeat(7, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 
