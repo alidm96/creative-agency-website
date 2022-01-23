@@ -74,9 +74,19 @@ body {
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end]; }
 
 .footer {
-  background-color: midnightblue;
+  background-color: #274472;
   grid-row: 5 / -1;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  padding: 10rem;
+  text-align: center; }
+  .footer a {
+    color: #C3E0E5;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: capitalize; }
 
 .gallery {
   display: grid;

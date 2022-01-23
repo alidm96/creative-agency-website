@@ -1,6 +1,17 @@
 .footer {
-    background-color: midnightblue;
-
-    grid-row: 5 / -1;
-    grid-column: full-start / full-end;
+    background-color:      $color-primary-dark;
+    grid-row:              5 / -1;
+    grid-column:           full-start / full-end;
+    display:               grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    padding:               10rem;
+    text-align:            center;
+    
+    a {
+        color:           $color-secondary;
+        font-size:       1.5rem;
+        font-weight:     700;
+        text-decoration: none;
+        text-transform:  capitalize;
+    }
 }
