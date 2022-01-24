@@ -8,4 +8,13 @@
         justify-self: center;
         width:        70%;
     }
+
+    @media only screen and (max-width: 62.5em /*$bp-large*/) {
+        grid-row:    2 / 3;
+        grid-column: col-start 5 / full-end;
+
+        img {
+            width: 100%;
+        }
+    }
 }

@@ -42,6 +42,9 @@
     .aboutus__content--6 {
       grid-row: 3 / -1;
       grid-column: 2 / 3; }
+  @media only screen and (max-width: 62.5em) {
+    .aboutus {
+      grid-row: 6 / 7; } }
 
 .agency {
   display: grid;
@@ -51,6 +54,12 @@
   .agency img {
     justify-self: center;
     width: 70%; }
+  @media only screen and (max-width: 62.5em) {
+    .agency {
+      grid-row: 2 / 3;
+      grid-column: col-start 5 / full-end; }
+      .agency img {
+        width: 100%; } }
 
 *,
 *::after,
@@ -61,6 +70,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -72,6 +84,13 @@ body {
   display: grid;
   grid-template-rows: 60vh repeat(4, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 62.5em) {
+    .container {
+      grid-template-rows: 6rem 30vh repeat(4, min-content);
+      grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end]; } }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-rows: 6rem 40vh repeat(4, min-content); } }
 
 .footer {
   background-color: #274472;
@@ -87,6 +106,9 @@ body {
     font-weight: 700;
     text-decoration: none;
     text-transform: capitalize; }
+  @media only screen and (max-width: 62.5em) {
+    .footer {
+      grid-row: 7 / -1; } }
 
 .gallery {
   display: grid;
@@ -113,6 +135,13 @@ body {
     height: 100%;
     width: 100%;
     display: block; }
+  @media only screen and (max-width: 62.5em) {
+    .gallery {
+      grid-row: 5 / 6; } }
+  @media only screen and (max-width: 37.5em) {
+    .gallery {
+      padding-top: 5rem;
+      padding-bottom: 5rem; } }
 
 .head {
   display: grid;
@@ -135,6 +164,21 @@ body {
       border-radius: 100%;
       font-size: 7rem;
       padding-right: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .head .heading-primary--main {
+      font-size: 6rem;
+      font-weight: 600;
+      line-height: 5rem; }
+    .head .heading-primary--sub {
+      font-size: 1.4rem;
+      font-weight: 800; }
+      .head .heading-primary--sub i {
+        font-size: 5rem;
+        padding-right: 0.5rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .head {
+      grid-row: 2 / 3;
+      grid-column: full-start / col-end 4; } }
 
 .services {
   display: grid;
@@ -182,6 +226,34 @@ body {
     .services__items--6 {
       grid-row: 3 / 4;
       grid-column: col-start 3 / col-end 3; }
+    @media only screen and (max-width: 37.5em) {
+      .services__items--1 {
+        grid-row: 2 / 3;
+        grid-column: col-start 1 / col-end 1; }
+      .services__items--2 {
+        grid-row: 2 / 3;
+        grid-column: col-start 2 / col-end 2; }
+      .services__items--3 {
+        grid-row: 3 / 4;
+        grid-column: col-start 1 / col-end 1; }
+      .services__items--4 {
+        grid-row: 3 / 4;
+        grid-column: col-start 2 / col-end 2; }
+      .services__items--5 {
+        grid-row: 4 / 5;
+        grid-column: col-start 1 / col-end 1; }
+      .services__items--6 {
+        grid-row: 4 / 5;
+        grid-column: col-start 2 / col-end 2; } }
+  @media only screen and (max-width: 62.5em) {
+    .services {
+      grid-row: 4 / 5;
+      grid-gap: 5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .services {
+      grid-template-rows: minmax(0, 1fr) repeat(3, min-content) minmax(0, 1fr);
+      grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(2, [col-start] max-content [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
+      grid-gap: 6rem; } }
 
 .sidebar {
   display: flex;
@@ -190,6 +262,12 @@ body {
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
   position: relative; }
+  @media only screen and (max-width: 62.5em) {
+    .sidebar {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+      justify-content: flex-end;
+      align-items: center; } }
 
 .nav-btn {
   border: none;
@@ -208,3 +286,7 @@ body {
     transform: translateY(-1.5rem); }
   .nav-btn::after {
     transform: translateY(1.3rem); }
+  @media only screen and (max-width: 62.5em) {
+    .nav-btn {
+      margin-top: 0;
+      margin-right: 4rem; } }

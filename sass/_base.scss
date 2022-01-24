@@ -9,6 +9,13 @@ $color-blue:         #5885AF;
 $color-black:        #000000;
 $color-white:        #ffffff;
 
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200 px
+$bp-large:   62.5em; // 1000 px
+$bp-medium:  50em;   // 800  px
+$bp-small:   37.5em; // 600  px
+
 *,
 *::after,
 *::before {
@@ -19,6 +26,10 @@ $color-white:        #ffffff;
 html {
     box-sizing: border-box;
     font-size:  62.5%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -34,4 +45,14 @@ body {
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(4rem, 1fr) 
                            [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 
                            minmax(4rem, 1fr) [full-end];
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows:    6rem 30vh repeat(4, min-content);
+        grid-template-columns: [full-start] minmax(4rem , 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 
+                               minmax(4rem , 1fr) [full-end];
+    }
+                
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 6rem 40vh repeat(4, min-content);
+    }
 }
